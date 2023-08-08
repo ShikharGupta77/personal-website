@@ -1,11 +1,12 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --primary: #181818;
-  --secondary: #F2F2F2;
-  --accent: #00C9E5
+  --secondary: #f2f2f2;
+  --accent: #00c9e5;
+  --lighter-primary: #34363a;
 }
 
 html,
@@ -14,5 +15,3 @@ body {
   margin: 0;
   background-color: var(--primary);
 }
-
-
