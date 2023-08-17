@@ -1,0 +1,132 @@
+:root {
+  --circle-size: 115px;
+  --line-height: 175px;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --circle-size: 90px;
+    --line-height: 180px;
+  }
+}
+
+/* Circle */
+#loading {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  position: relative;
+}
+
+.inner-shadow {
+  z-index: 4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: var(--primary);
+
+  top: 50%;
+  left: 50%;
+  width: calc(var(--circle-size) - 8px);
+  height: calc(var(--circle-size) - 8px);
+  margin-left: calc(4px - var(--circle-size) / 2);
+  margin-top: calc(4px - var(--circle-size) / 2);
+  border-radius: 100%;
+}
+
+.hold {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip: rect(0px, var(--circle-size), var(--circle-size), calc(var(--circle-size) / 2));
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.fill,
+.dot {
+  background-color: var(--accent);
+}
+
+.fill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  clip: rect(0px, calc(var(--circle-size) / 2), var(--circle-size), 0px);
+}
+
+.left .fill {
+  z-index: 1;
+}
+
+.right {
+  z-index: 3;
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+}
+
+.right .fill {
+  z-index: 3;
+}
+
+.fill {
+  animation: semicircle 0.5s ease-in-out;
+  animation: semicircle 0.5s ease-in-out;
+  animation: semicircle 0.5s ease-in-out both;
+}
+
+@keyframes semicircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+/* Line */
+@keyframes drawLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--line-height);
+  }
+}
+
+.line {
+  background-color: var(--accent);
+  width: 4px;
+}
+
+.animate-line {
+  animation: drawLine 0.5s ease-in-out forwards;
+}
+
+.lineContainer {
+  height: var(--line-height);
+}
+
+/* Image and Text*/
+.image,
+.text {
+  opacity: 0;
+}
+
+.animate-image {
+  animation: fadeIn 0.5s ease-in-out forwards; /* Apply the animation */
+}
+
+.animate-text {
+  animation: fadeIn 0.25s ease-in-out forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with transparency */
+  }
+  to {
+    opacity: 100; /* Gradually become fully opaque */
+  }
+}
