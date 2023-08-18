@@ -40,7 +40,7 @@ export default function Experience() {
     <div className="flex flex-col" ref={ref}>
       <Header number="02." text="Experience" />
       <div className="mt-16 flex w-full flex-row justify-between">
-        <div className="mx-auto w-3/4">
+        <div className="mx-auto">
           {timelineItems.map((item, index) => (
             <TimelineComponent key={index} image={item.image} showBottomLine={item.showBottomLine} company={item.company} dates={item.dates} title={item.title} experience={item.experience} index={index} animate={animate} />
           ))}

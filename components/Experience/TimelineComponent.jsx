@@ -45,18 +45,8 @@ export default function TimelineComponent({ company, dates, title, experience, i
     }
   }, [animate]);
 
-  useEffect(() => {
-    if (textRefs[2] && textRefs[3]) {
-      const titleDiv = textRefs[2].current;
-      const titleWidth = titleDiv.offsetWidth;
-
-      const experienceDiv = textRefs[3].current;
-      //experienceDiv.style.width = `${titleWidth * 1.5}px`;
-    }
-  }, []);
-
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row">
       <div className="flex flex-col pt-1 text-right text-secondary-color">
         <p className="text whitespace-nowrap text-2xl" ref={textRefs[0]}>
           {company}
@@ -65,7 +55,7 @@ export default function TimelineComponent({ company, dates, title, experience, i
           {dates}
         </p>
       </div>
-      <div className="mx-16 flex flex-col lg:mx-6">
+      <div className="mx-16 flex flex-1 flex-col justify-self-center lg:mx-6">
         <div className="left animate" id="loading">
           <div className="inner-shadow"></div>
           <Image src={image} className="inner-shadow image" alt="Company image" ref={imageRef} />
