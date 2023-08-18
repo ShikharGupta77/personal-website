@@ -5,8 +5,8 @@
 
 @media (max-width: 1023px) {
   :root {
-    --circle-size: 90px;
-    --line-height: 180px;
+    --circle-size: 60px;
+    --line-height: 250px;
   }
 }
 
@@ -45,7 +45,7 @@
 
 .fill,
 .dot {
-  background-color: var(--accent);
+  background-color: var(--secondary);
 }
 
 .fill {
@@ -71,9 +71,9 @@
 }
 
 .fill {
-  animation: semicircle 0.5s ease-in-out;
-  animation: semicircle 0.5s ease-in-out;
-  animation: semicircle 0.5s ease-in-out both;
+  animation: semicircle 0.6s ease-in-out;
+  animation: semicircle 0.6s ease-in-out;
+  animation: semicircle 0.6s ease-in-out both;
 }
 
 @keyframes semicircle {
@@ -96,12 +96,12 @@
 }
 
 .line {
-  background-color: var(--accent);
+  background-color: var(--secondary);
   width: 4px;
 }
 
 .animate-line {
-  animation: drawLine 0.5s ease-in-out forwards;
+  animation: drawLine 0.6s ease-in-out forwards;
 }
 
 .lineContainer {
@@ -115,11 +115,11 @@
 }
 
 .animate-image {
-  animation: fadeIn 0.5s ease-in-out forwards; /* Apply the animation */
+  animation: fadeIn 0.6s ease-in-out forwards; /* Apply the animation */
 }
 
 .animate-text {
-  animation: fadeIn 0.25s ease-in-out forwards; /* Apply the animation */
+  animation: fadeIn 0.2s ease-in-out forwards; /* Apply the animation */
 }
 
 @keyframes fadeIn {

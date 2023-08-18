@@ -4,12 +4,12 @@ import "./TimelineComponent.css";
 import Image from "next/image";
 import { useRef, useEffect } from "react";
 
-export default function TimelineComponent({ company, dates, title, experience, image, showBottomLine, index, animate }) {
+export default function TimelineComponent({ company, startDate, endDate, title, experience, image, showBottomLine, index, animate }) {
   const circleRefs = [useRef(null), useRef(null)];
   const lineRef = useRef(null);
   const imageRef = useRef(null);
-  const textRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
-  const delay = 500;
+  const textRefs = [useRef(null), useRef(null), useRef(null)];
+  const delay = 600;
 
   useEffect(() => {
     if (animate) {
@@ -25,13 +25,12 @@ export default function TimelineComponent({ company, dates, title, experience, i
           }
           textRefs.forEach((textRef, i) => {
             if (textRef.current) {
-              if (i % 2 == 0) {
-                textRef.current.classList.add("animate-text");
-              } else {
-                setTimeout(() => {
+              setTimeout(
+                () => {
                   textRef.current.classList.add("animate-text");
-                }, delay / 2);
-              }
+                },
+                (delay / 3) * i,
+              );
             }
           });
           setTimeout(() => {
@@ -47,15 +46,7 @@ export default function TimelineComponent({ company, dates, title, experience, i
 
   return (
     <div className="flex flex-row">
-      <div className="flex flex-col pt-1 text-right text-secondary-color">
-        <p className="text whitespace-nowrap text-2xl" ref={textRefs[0]}>
-          {company}
-        </p>
-        <p className="text whitespace-nowrap pt-2 text-base" ref={textRefs[1]}>
-          {dates}
-        </p>
-      </div>
-      <div className="mx-16 flex flex-1 flex-col justify-self-center lg:mx-6">
+      <div className="ml-6 mr-16 flex flex-1 flex-col justify-self-center lg:ml-2 lg:mr-5">
         <div className="left animate" id="loading">
           <div className="inner-shadow"></div>
           <Image src={image} className="inner-shadow image" alt="Company image" ref={imageRef} />
@@ -73,10 +64,13 @@ export default function TimelineComponent({ company, dates, title, experience, i
         )}
       </div>
       <div className="pt-1 text-left text-secondary-color">
-        <div className="text whitespace-nowrap text-2xl" ref={textRefs[2]}>
-          {title}
-        </div>
-        <div className="text pt-2 text-base" ref={textRefs[3]}>
+        <p className="text whitespace-nowrap  lg:text-lg" ref={textRefs[0]}>
+          <span className="text-2xl font-bold text-accent-color">{company}</span> <span className="pl-1 text-xl">{title}</span>
+        </p>
+        <p className="text whitespace-nowrap pt-2 text-base lg:text-xs" ref={textRefs[1]}>
+          {startDate} <span className="text-secondary-color">-</span> {endDate}
+        </p>
+        <div className="text pt-2 text-lg lg:text-sm" ref={textRefs[2]}>
           {experience}
         </div>
       </div>

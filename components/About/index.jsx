@@ -1,3 +1,5 @@
+"use client";
+
 import headshot from "./../../public/headshot.jpg";
 import Image from "next/image";
 import Header from "../Header";
@@ -12,8 +14,22 @@ import nodejs from "./../../public/technologies/nodejs.svg";
 import python from "./../../public/technologies/python.svg";
 import react from "./../../public/technologies/react.svg";
 import tensorflow from "./../../public/technologies/tensorflow.svg";
+import rickroll_gif from "./../../public/rickroll/rickroll.gif";
+import { useState, useRef, useEffect } from "react";
 
 export default function About() {
+  const [showRickroll, setShowRickroll] = useState(false);
+  const rickrollAudioRef = useRef(null);
+
+  useEffect(() => {
+    if (showRickroll) {
+      rickrollAudioRef.current.currentTime = 0;
+      rickrollAudioRef.current.play();
+    } else {
+      rickrollAudioRef.current.pause();
+    }
+  }, [showRickroll]);
+
   const icons = [
     { name: "CSS", icon: css },
     { name: "Git", icon: git },
@@ -44,7 +60,8 @@ export default function About() {
             Outside of programming, I also love a good day outdoors! I often go out with friends and family. I also really like playing table tennis, and played for a few years. I'm down for a game at anytime of the day!
           </p>
           <div className="flex flex-col desktop:w-5/12">
-            <Image src={headshot} className="-mt-5 rounded-full p-10 drop-shadow-[0.6rem_0.55rem_0px_var(--accent)] transition duration-300 hover:drop-shadow-[1.1rem_1.05rem_0px_var(--accent)]" />
+            <Image src={showRickroll ? rickroll_gif : headshot} className="-mt-5 rounded-full p-10 drop-shadow-[0.6rem_0.55rem_0px_var(--accent)] transition duration-300 hover:drop-shadow-[1.1rem_1.05rem_0px_var(--accent)]" onDoubleClick={() => setShowRickroll(!showRickroll)} />
+            <audio src="./rickroll/rickroll.mp3" ref={rickrollAudioRef} />
           </div>
         </div>
         <div className="flex flex-row justify-around">
