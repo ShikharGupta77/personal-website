@@ -64,7 +64,7 @@ export default function TimelineComponent({ company, startDate, endDate, title, 
         )}
       </div>
       <div className="pt-1 text-left text-secondary-color">
-        <p className="text whitespace-nowrap  lg:text-lg" ref={textRefs[0]}>
+        <p className="text whitespace-nowrap" ref={textRefs[0]}>
           <span className="text-2xl font-bold text-accent-color">{company}</span> <span className="pl-1 text-xl">{title}</span>
         </p>
         <p className="text whitespace-nowrap pt-2 text-base lg:text-xs" ref={textRefs[1]}>
