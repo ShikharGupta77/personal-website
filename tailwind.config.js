@@ -15,7 +15,6 @@ module.exports = {
         lg: { max: "1023px" },
         desktop: { min: "1024px" }, // for min width only
         xl: { max: "1279px" },
-        widescreen: { min: "1280px" },
         "2xl": { max: "1535px" },
       },
       fontSize: {
