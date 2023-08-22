@@ -9,14 +9,14 @@ export default function Contact() {
 
   return (
     <Section number={"04."} text="Contact">
-      <div className="mt-5 flex flex-col lg:mt-1">
-        <p className="pt-5 text-xl text-secondary-color lg:text-base desktop:w-8/12">If you have opportunities or are interested in collaboration, please email me. You can also connect on social media for questions or just to say hi! My inbox is always open, and I'll try to get back as soon as possible.</p>
+      <div className="mt-1 flex flex-col lg:mt-5">
+        <p className="pt-5 text-base text-secondary-color lg:w-8/12 lg:text-xl">If you have opportunities or are interested in collaboration, please email me. You can also connect on social media for questions or just to say hi! My inbox is always open, and I'll try to get back as soon as possible.</p>
       </div>
-      <a className="w-fit rounded-full bg-secondary-color py-2 text-base text-primary-color transition duration-300 lg:text-sm" target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com">
+      <a className="w-fit rounded-full bg-secondary-color py-2 text-sm text-primary-color transition duration-300 lg:text-base" target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com">
         <button className="mt-9">
           <div className="group flex w-full flex-row pl-5 pr-4">
             Email
-            <LiaAngleRightSolid size={15} className="my-auto mt-[0.25rem] w-6 transition-all duration-300 lg:mt-[0.2rem] desktop:group-hover:pl-2" />
+            <LiaAngleRightSolid size={15} className="my-auto mt-[0.2rem] w-6 transition-all duration-300 lg:mt-[0.25rem] lg:group-hover:pl-2" />
           </div>
         </button>
       </a>
@@ -34,7 +34,7 @@ export default function Contact() {
           <FaInstagram size={28} />
         </a>
       </div>
-      <footer className="mb-12 mt-48 text-base text-lighter-primary-color lg:text-sm">
+      <footer className="mb-12 mt-48 text-sm text-lighter-primary-color lg:text-base">
         © Shikhar Gupta {year}. All rights reserved.
         <br />
         This site is built with{" "}

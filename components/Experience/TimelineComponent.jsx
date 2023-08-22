@@ -46,7 +46,7 @@ export default function TimelineComponent({ company, startDate, endDate, title, 
 
   return (
     <div className="flex flex-row">
-      <div className="ml-6 mr-16 flex flex-1 flex-col justify-self-center lg:ml-2 lg:mr-5">
+      <div className="ml-2 mr-5 flex flex-1 flex-col justify-self-center lg:ml-6 lg:mr-16">
         <div className="left animate" id="loading">
           <div className="inner-shadow"></div>
           <Image src={image} className="inner-shadow image" alt="Company image" ref={imageRef} />
@@ -67,10 +67,10 @@ export default function TimelineComponent({ company, startDate, endDate, title, 
         <p className="text whitespace-nowrap" ref={textRefs[0]}>
           <span className="text-2xl font-bold text-accent-color">{company}</span> <span className="pl-1 text-xl">{title}</span>
         </p>
-        <p className="text whitespace-nowrap pt-2 text-base lg:text-xs" ref={textRefs[1]}>
+        <p className="text whitespace-nowrap pt-2 text-xs lg:text-base" ref={textRefs[1]}>
           {startDate} <span className="text-secondary-color">-</span> {endDate}
         </p>
-        <div className="text pt-2 text-lg lg:text-sm" ref={textRefs[2]}>
+        <div className="text pt-2 text-sm lg:text-lg" ref={textRefs[2]}>
           {experience}
         </div>
       </div>

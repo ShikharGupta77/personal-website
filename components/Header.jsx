@@ -11,7 +11,7 @@ export default function Header({ number, text, reveal, reference }) {
       </div>
       <div className="flex w-full flex-col">
         <div className="h-1/2"></div>
-        <hr className={`ml-5 mt-6 border-lighter-primary-color transition-all duration-700 lg:ml-3 ${reveal ? "w-1/4 lg:w-3/4" : "w-0"}`} />
+        <hr className={`ml-3 mt-6 border-lighter-primary-color transition-all duration-700 lg:ml-5 ${reveal ? "w-3/4 lg:w-1/4" : "w-0"}`} />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {/*Desktop menu*/}
-      <div className="flex h-24 justify-between pt-5 text-secondary-color lg:hidden">
+      <div className="hidden h-24 justify-between pt-5 text-secondary-color lg:flex">
         <div className="ml-20 flex flex-row items-center space-x-11 pb-2 transition duration-300">
           {links.map((link, i) => {
             return (
@@ -54,7 +54,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className=" z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color desktop:hidden">
+      <div className="z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color lg:hidden">
         {/* Blur */}
         <div className={`fixed inset-0 bg-transparent backdrop-blur transition-opacity duration-300 ${isMobileMenuToggled ? "opacity-100" : "pointer-events-none opacity-0"}`}></div>
         <span className={`z-20 ml-auto mr-6 transform cursor-pointer text-secondary-color transition-transform duration-300 ${isMobileMenuToggled ? "-rotate-180" : ""}`} onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
@@ -76,7 +76,7 @@ export default function Navbar() {
               Resume
             </a>
           </div>
-          <div className="mb-16 ml-4 mr-12 flex flex-row items-center justify-around space-x-1">
+          <div className="mb-16 ml-4 mr-12 flex flex-row items-center justify-around">
             <a target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com" className="cursor-pointer text-secondary-color transition duration-300">
               <MdEmail size={29} />
             </a>

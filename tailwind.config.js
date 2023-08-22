@@ -9,14 +9,6 @@ module.exports = {
         "accent-color": "var(--accent)",
         "lighter-primary-color": "var(--lighter-primary)",
       },
-      screens: {
-        sm: { max: "639px" },
-        md: { max: "767px" },
-        lg: { max: "1023px" },
-        desktop: { min: "1024px" }, // for min width only
-        xl: { max: "1279px" },
-        "2xl": { max: "1535px" },
-      },
       fontSize: {
         "2xl-responsive": ["clamp(45px, 4.75vw, 1000px)", "4.75rem"],
         "xl-responsive": ["clamp(32px, 2.75vw, 600px)", "2rem"],
