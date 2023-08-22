@@ -6,7 +6,7 @@ import projectInfo from "./projectInfo";
 export default function Projects() {
   return (
     <Section number={"03."} text="Projects">
-      <div className="mt-28 flex flex-col space-y-48 lg:space-y-20">
+      <div className="mt-28 flex flex-col space-y-56">
         {projectInfo.map((p, i) => (
           <Project name={p.name} images={p.images} description={p.description} technologies={p.technologies} github={p.github} external_link={p.external_link} reverse={i % 2 == 1} />
         ))}

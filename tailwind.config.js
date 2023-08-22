@@ -8,11 +8,7 @@ module.exports = {
         "secondary-color": "var(--secondary)",
         "accent-color": "var(--accent)",
         "lighter-primary-color": "var(--lighter-primary)",
-      },
-      fontSize: {
-        "2xl-responsive": ["clamp(45px, 4.75vw, 1000px)", "4.75rem"],
-        "xl-responsive": ["clamp(32px, 2.75vw, 600px)", "2rem"],
-        "lg-responsive": ["clamp(15px, 1.25vw, 250px)", "1.5rem"],
+        "accent-faded-color": "var(--accent-faded)",
       },
     },
   },

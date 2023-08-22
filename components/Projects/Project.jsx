@@ -4,13 +4,13 @@ import { FiExternalLink } from "react-icons/fi";
 
 export default function Project({ name, images, description, technologies, github, external_link, reverse }) {
   return (
-    <div className={`flex ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} h-[34rem] flex-col`}>
-      <div className="flex h-1/2 flex-row justify-center rounded-3xl bg-lighter-primary-color lg:w-7/12">
+    <div className={`flex ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} h-96 flex-col`}>
+      <div className="flex flex-row justify-center space-x-14 drop-shadow-[0rem_0rem_30px_var(--accent-faded)]">
         {images.map((image) => (
-          <Image src={image} className="m-3 h-auto w-auto rounded-3xl lg:m-0" alt="Project Image" />
+          <Image src={image} className="h-auto w-auto rounded-3xl lg:m-0" alt="Project Image" />
         ))}
       </div>
-      <div className={`flex flex-col space-y-4 text-secondary-color lg:mx-20 lg:w-3/12 ${reverse ? "text-right" : "text-left"} pt-8 lg:pt-28`}>
+      <div className={`flex flex-col space-y-4 text-secondary-color lg:mx-20 ${reverse ? "text-right" : "text-left"} pt-8 lg:pt-28`}>
         <p className="text-2xl font-semibold text-accent-color lg:text-4xl">{name}</p>
         <p className="text-sm lg:text-lg">{description}</p>
         <div className={`flex flex-row ${reverse ? "justify-end" : "justify-start"}`}>

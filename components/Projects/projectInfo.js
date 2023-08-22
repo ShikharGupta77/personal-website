@@ -32,7 +32,7 @@ const projectInfo = [
   {
     name: "ML Research",
     images: [research],
-    description: "Research on conditional synthetic image generation techniques for reducing algorithmic bias in imbalanced datasets.",
+    description: "Reducing algorithmic bias in imbalanced datasets through conditional synthetic image generation.",
     technologies: ["Tensorflow", "Pandas", "Seaborn", "Numpy"],
     github: "https://github.com/ShikharGupta77/Conditional-Synthetic-Image-Generation-for-Reducing-Algorithmic-Bias-in-Imbalanced-Datasets",
     external_link: "https://docs.google.com/presentation/d/1rwqQeeHNJa8b2X2G9EYm_URZnzYVyJa8/edit#slide=id.p1",
