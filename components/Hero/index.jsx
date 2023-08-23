@@ -69,10 +69,10 @@ export default function Hero() {
               <h1 className="text-5xl font-bold text-accent-color transition duration-300 lg:text-8xl opacity-0" ref={mainRefs[1]}>Shikhar Gupta</h1>
               <h3 className="text-base text-secondary-color transition duration-300 lg:text-2xl opacity-0" ref={mainRefs[2]}>I like creating apps, websites, and AI models</h3>
             </div>
-            <ScrollLink to="Projects" smooth={true} duration={500} offset={-50}>
+            <ScrollLink to="Experience" smooth={true} duration={500} offset={-50}>
               <button className="mt-4 rounded-full bg-secondary-color py-2 opacity-0 transition duration-300 lg:mt-5" ref={mainRefs[3]}>
                 <div className="group flex w-full flex-row pl-5 pr-4 text-sm lg:text-sm 2xl:text-base">
-                  See my work
+                  See my experience
                   <LiaAngleRightSolid size={15} className="my-auto mt-[0.2rem] w-6 transition-all duration-300 lg:group-hover:pl-2" />
                 </div>
               </button>
