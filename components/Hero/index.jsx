@@ -28,7 +28,7 @@ export default function Hero() {
           headers[i].style.transform = "translateY(20px)";
           icons[5 - i - 1].style.opacity = "1";
           icons[5 - i - 1].style.transform = "translateY(20px)";
-        }, i * 200 + delay);
+        }, i * 125 + delay);
       }
     }
 
@@ -37,7 +37,7 @@ export default function Hero() {
           setTimeout(() => {
             ref.current.style.opacity = "1";
             ref.current.style.transform = "translateY(-10px)";
-          }, i*200 + 1000 + delay);
+          }, i*100 + 725 + delay);
         }
     })
 
@@ -46,7 +46,7 @@ export default function Hero() {
       setTimeout(() => {
         cubeRef.current.style.transform = "scale(0.95)";
         cubeRef.current.style.opacity = "1";
-      }, 1800 + delay);
+      }, 1000 + delay);
     }
 
     setTimeout(() => {
@@ -65,12 +65,12 @@ export default function Hero() {
         <div className="-mt-16 mb-40 flex w-full flex-col items-center justify-center text-center lg:mb-0 lg:mt-0 lg:w-7/12 lg:text-left">
           <div className="w-full translate-y-[10px] lg:-ml-8 lg:-mt-7 lg:mb-32 lg:w-8/12 lg:pr-4">
             <div className="-ml-[5%] flex scale-90 flex-col space-y-3 lg:space-y-5">
-              <h2 className="border-r-0 text-4xl font-semibold text-secondary-color transition duration-200 lg:text-6xl opacity-0" ref={mainRefs[0]}>Hey there! I'm</h2>
-              <h1 className="text-5xl font-bold text-accent-color transition duration-200 lg:text-8xl opacity-0" ref={mainRefs[1]}>Shikhar Gupta</h1>
-              <h3 className="text-base text-secondary-color transition duration-200 lg:text-2xl opacity-0" ref={mainRefs[2]}>I like creating apps, websites, and AI models</h3>
+              <h2 className="border-r-0 text-4xl font-semibold text-secondary-color transition duration-300 lg:text-6xl opacity-0" ref={mainRefs[0]}>Hey there! I'm</h2>
+              <h1 className="text-5xl font-bold text-accent-color transition duration-300 lg:text-8xl opacity-0" ref={mainRefs[1]}>Shikhar Gupta</h1>
+              <h3 className="text-base text-secondary-color transition duration-300 lg:text-2xl opacity-0" ref={mainRefs[2]}>I like creating apps, websites, and AI models</h3>
             </div>
             <ScrollLink to="Projects" smooth={true} duration={500} offset={-50}>
-              <button className="mt-4 rounded-full bg-secondary-color py-2 opacity-0 transition duration-500 lg:mt-5" ref={mainRefs[3]}>
+              <button className="mt-4 rounded-full bg-secondary-color py-2 opacity-0 transition duration-300 lg:mt-5" ref={mainRefs[3]}>
                 <div className="group flex w-full flex-row pl-5 pr-4 text-sm lg:text-sm 2xl:text-base">
                   See my work
                   <LiaAngleRightSolid size={15} className="my-auto mt-[0.2rem] w-6 transition-all duration-300 lg:group-hover:pl-2" />
