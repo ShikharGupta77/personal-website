@@ -41,7 +41,7 @@ export default function Hero() {
   function typeName(typewriter) {
     typewriter
       .typeString("Shikhar Gupta")
-      .pauseFor(2600)
+      .pauseFor(1700)
       .callFunction(() => {
         setNameStatus(2);
         setLikeStatus(1);

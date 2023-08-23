@@ -7,7 +7,6 @@ import { Environment, OrbitControls, useAnimations, useGLTF } from "@react-three
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import { BloomFilter } from "next/dist/shared/lib/bloom-filter";
 
 const Model = () => {
   const groupRef = useRef();
