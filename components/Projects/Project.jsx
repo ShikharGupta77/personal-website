@@ -40,8 +40,8 @@ export default function Project({ name, images, description, technologies, githu
   return (
     <div className={`flex ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} h-96 translate-y-[20px] flex-col opacity-0 transition duration-500`} ref={ref}>
       <div className="flex flex-row justify-center space-x-6 drop-shadow-[0rem_0rem_15px_var(--accent-faded)] lg:max-w-[50rem] lg:space-x-12 lg:drop-shadow-[0rem_0rem_30px_var(--accent-faded)]">
-        {images.map((image) => (
-          <div className="flex flex-row items-center">
+        {images.map((image, i) => (
+          <div className="flex flex-row items-center" key={i}>
             <Image src={image} className="h-auto w-auto self-center rounded-xl lg:m-0 lg:rounded-3xl" alt="Project Image" />{" "}
           </div>
         ))}
