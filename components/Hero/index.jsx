@@ -28,7 +28,7 @@ export default function Hero() {
     typewriter
       .callFunction(() => window.scrollTo(0, 0))
       .typeString("Hey there!")
-      .pauseFor(2300)
+      .pauseFor(1700)
       .typeString(" I'm")
       .pauseFor(100)
       .callFunction(() => {

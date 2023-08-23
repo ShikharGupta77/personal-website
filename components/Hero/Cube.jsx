@@ -29,7 +29,7 @@ const Model = () => {
 
   useEffect(() => {
     gl.shadowMap.enabled = true;
-    gl.outputEncoding = THREE.sRGBEncoding;
+    gl.outputColorSpace = THREE.sRGBEncoding;
   }, [gl]);
 
   useEffect(() => {
