@@ -18,17 +18,19 @@ export default function Hero() {
   const [likeStatus, setLikeStatus] = useState(0);
   const [revealPage, setRevealPage] = useState(false);
 
-  // Scroll to top
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scroll to top
+    document.body.style.overflow = "hidden"; // scroll off during animation
+    document.body.style.touchAction = "none"; // disable for mobile
   }, []);
 
   function typeHey(typewriter) {
     typewriter
+      .callFunction(() => window.scrollTo(0, 0))
       .typeString("Hey there!")
       .pauseFor(2300)
       .typeString(" I'm")
-      .pauseFor(2100)
+      .pauseFor(100)
       .callFunction(() => {
         setHeyStatus(2);
         setNameStatus(1);
@@ -39,7 +41,7 @@ export default function Hero() {
   function typeName(typewriter) {
     typewriter
       .typeString("Shikhar Gupta")
-      .pauseFor(2300)
+      .pauseFor(2600)
       .callFunction(() => {
         setNameStatus(2);
         setLikeStatus(1);
@@ -85,6 +87,8 @@ export default function Hero() {
                 const menu = navRef.current.querySelector(".mobile");
                 menu.style.opacity = "1";
               }
+              document.body.style.overflow = "auto"; // allow scrolling after animation
+              document.body.style.touchAction = "";
             }, 800);
           }
         }, 1100);
@@ -101,7 +105,18 @@ export default function Hero() {
             <div className="-ml-[5%] flex scale-90 flex-col space-y-3 lg:space-y-5">
               <h2 className={`border-r-0 text-4xl font-semibold text-secondary-color transition duration-300 lg:text-6xl ${heyStatus === 0 ? "opacity-0" : ""}`}>{heyStatus === 1 ? <Typewriter onInit={(typewriter) => typeHey(typewriter)} /> : "Hey there! I'm"}</h2>
               <h1 className={`text-5xl font-bold text-accent-color transition duration-300 lg:text-8xl ${nameStatus === 0 ? "opacity-0" : ""}`}>{nameStatus === 1 ? <Typewriter onInit={(typewriter) => typeName(typewriter)} /> : "Shikhar Gupta"}</h1>
-              <h3 className={`text-base text-secondary-color transition duration-300 lg:text-2xl ${likeStatus === 0 ? "opacity-0" : ""}`}>{likeStatus === 1 ? <Typewriter onInit={(typewriter) => typeLikes(typewriter)} /> : "I like creating apps, websites, and AI models"}</h3>
+              <h3 className={`text-base text-secondary-color transition duration-300 lg:text-2xl ${likeStatus === 0 ? "opacity-0" : ""}`}>
+                {likeStatus === 1 ? (
+                  <Typewriter
+                    onInit={(typewriter) => typeLikes(typewriter)}
+                    options={{
+                      delay: 60,
+                    }}
+                  />
+                ) : (
+                  "I like creating apps, websites, and AI models"
+                )}
+              </h3>
             </div>
             <ScrollLink to="Projects" smooth={true} duration={500} offset={-50}>
               <button className="mt-4 rounded-full bg-secondary-color py-2 opacity-0 transition duration-500 lg:mt-5" ref={buttonRef}>
