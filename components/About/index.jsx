@@ -100,7 +100,7 @@ export default function About() {
   ];
 
   return (
-    <Section number={"01."} text="About Me">
+    <Section number={"01."} text="About Me" id="About">
       <div className="mt-5 flex flex-col-reverse lg:flex-row">
         <p className="pt-5 text-base text-secondary-color lg:w-7/12 lg:pr-16 lg:text-xl">
           Hey! I'm Shikhar Gupta, and I'm currently pursuing a Bachelor's Degree of Science in Computer Science at the University of California, Davis. Last summer, I was a Software Engineering Intern at{" "}

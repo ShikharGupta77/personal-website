@@ -8,7 +8,7 @@ export default function Contact() {
   var year = date.getFullYear();
 
   return (
-    <Section number={"04."} text="Contact">
+    <Section number={"04."} text="Contact" id="Contact">
       <div className="mt-1 flex flex-col lg:mt-5">
         <p className="pt-5 text-base text-secondary-color lg:w-8/12 lg:text-xl">If you have opportunities or are interested in collaboration, please email me. You can also connect on social media for questions or just to say hi! My inbox is always open, and I'll try to get back as soon as possible.</p>
       </div>
@@ -37,7 +37,7 @@ export default function Contact() {
       <footer className="mb-12 mt-48 text-sm text-lighter-primary-color lg:text-base">
         © Shikhar Gupta {year}. All rights reserved.
         <br />
-        This site is built with{" "}
+        This site is built from scratch with{" "}
         <a className="underline underline-offset-2 hover:underline-offset-4" href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
           Next.js
         </a>

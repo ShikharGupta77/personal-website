@@ -41,7 +41,7 @@ export default function Experience() {
   }, [ref]);
 
   return (
-    <Section number="02." text="Experience">
+    <Section number="02." text="Experience" id="Experience">
       <div className="mt-20 flex w-full flex-row justify-between lg:mt-28" ref={ref}>
         <div className="mx-auto">
           {timelineItems.map((item, index) => (

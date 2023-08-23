@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaDiscord, FaInstagram, FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail, MdOutlineEmail } from "react-icons/md";
+import { Link } from "react-scroll";
 
 export default function Navbar({ navRef }) {
   const links = ["About", "Experience", "Projects", "Contact"];
@@ -18,16 +19,16 @@ export default function Navbar({ navRef }) {
   }, [isMobileMenuToggled]);
 
   return (
-    <>
+    <div ref={navRef}>
       {/*Desktop menu*/}
-      <div className="hidden h-24 justify-between pt-5 text-secondary-color lg:flex" ref={navRef}>
+      <div className="desktop hidden h-24 justify-between pt-5 text-secondary-color lg:flex">
         <div className="headers ml-20 flex -translate-y-[20px] flex-row items-center space-x-11 pb-2 transition duration-300">
           {links.map((link, i) => {
             return (
-              <a href={`#${link}`} className="text-md group text-secondary-color opacity-0 transition duration-300 hover:text-accent-color" key={i}>
+              <Link key={i} to={link} smooth={true} duration={500} offset={-50} className="text-md group text-secondary-color opacity-0 transition duration-300 hover:cursor-pointer hover:text-accent-color">
                 {link}
                 <span className="block h-0.5 max-w-0 bg-accent-color transition-all duration-300 group-hover:max-w-full"></span>
-              </a>
+              </Link>
             );
           })}
           <a target="_blank" rel="noopener noreferrer" className="text-md rounded-full bg-secondary-color px-5 py-2 text-primary-color opacity-0 drop-shadow-[0_0px_10px_var(--accent)] transition duration-300 hover:drop-shadow-[0_0px_13px_var(--accent)]" href="https://drive.google.com/file/d/11JLzIpYyHfdBtnBo5YXxKTHV5oJuBFSZ/view?usp=drive_link">
@@ -54,9 +55,9 @@ export default function Navbar({ navRef }) {
       </div>
 
       {/* Mobile Menu */}
-      <div className="z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color lg:hidden">
+      <div className="mobile z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color lg:hidden">
         {/* Blur */}
-        <div className={`fixed inset-0 bg-transparent backdrop-blur transition-opacity duration-300 ${isMobileMenuToggled ? "opacity-100" : "pointer-events-none opacity-0"}`}></div>
+        <div className={`fixed inset-0 z-10 bg-transparent backdrop-blur transition-opacity duration-300 ${isMobileMenuToggled ? "opacity-100" : "pointer-events-none opacity-0"}`}></div>
         <span className={`z-20 ml-auto mr-6 transform cursor-pointer text-secondary-color transition-transform duration-300 ${isMobileMenuToggled ? "-rotate-180" : ""}`} onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>
           {isMobileMenuToggled ? <FaTimes size={28} /> : <FaBars size={28} />}
         </span>
@@ -65,9 +66,9 @@ export default function Navbar({ navRef }) {
             {links.map((link, i) => {
               return (
                 <div key={i}>
-                  <a href={`#${link}`} className="group text-xl text-secondary-color transition duration-300">
+                  <Link to={link} smooth={true} duration={500} offset={-50} onClick={() => setIsMobileMenuToggled(false)} className="group text-xl text-secondary-color transition duration-300">
                     {link}
-                  </a>
+                  </Link>
                   <span className="block h-0.5 max-w-full bg-accent-color transition-all duration-300"></span>
                 </div>
               );
@@ -95,6 +96,6 @@ export default function Navbar({ navRef }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

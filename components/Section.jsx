@@ -41,7 +41,7 @@ export default function Section(props) {
   }, [ref]);
 
   return (
-    <section className="flex w-full flex-col">
+    <section className="flex w-full flex-col" id={props.id}>
       <Header number={props.number} text={props.text} reveal={reveal} reference={ref} />
       <div className="opacity-0 transition duration-500" ref={children}>
         <div className="translate-y-[30px]"> {props.children} </div>
