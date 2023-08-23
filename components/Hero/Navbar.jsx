@@ -27,7 +27,7 @@ export default function Navbar({ navRef }) {
         <div className="headers ml-20 flex -translate-y-[20px] flex-row items-center space-x-11 pb-2 transition duration-300">
           {links.map((link, i) => {
             return (
-              <Link key={i} to={link} smooth={true} duration={500} offset={-50} className="text-md group text-secondary-color opacity-0 transition duration-300 hover:cursor-pointer hover:text-accent-color">
+              <Link key={i} to={link} smooth={true} duration={500} offset={-50} className="text-md group text-secondary-color opacity-0 transition duration-200 hover:cursor-pointer hover:text-accent-color">
                 {link}
                 <span className="block h-0.5 max-w-0 bg-accent-color transition-all duration-300 group-hover:max-w-full"></span>
               </Link>
