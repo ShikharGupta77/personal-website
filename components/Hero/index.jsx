@@ -17,43 +17,44 @@ export default function Hero() {
   }, []);
 
   useEffect(() => {
-      if (navRef.current) {
-        const headers = navRef.current.querySelectorAll(".desktop .headers a");
-        const icons = navRef.current.querySelectorAll(".desktop .icons a");
+    const delay = 200
+    if (navRef.current) {
+      const headers = navRef.current.querySelectorAll(".desktop .headers a");
+      const icons = navRef.current.querySelectorAll(".desktop .icons a");
 
-        for (let i = 0; i < 5; i++) {
-          setTimeout(() => {
-            headers[i].style.opacity = "1";
-            headers[i].style.transform = "translateY(20px)";
-            icons[5 - i - 1].style.opacity = "1";
-            icons[5 - i - 1].style.transform = "translateY(20px)";
-          }, i * 200);
-        }
-      }
-
-      mainRefs.forEach((ref, i) => {
-        if (ref.current) {
-            setTimeout(() => {
-              ref.current.style.opacity = "1";
-              ref.current.style.transform = "translateY(-10px)";
-            }, i*200 + 1000);
-          }
-      })
-
-      if (cubeRef.current) {
-        cubeRef.current.style.transform = "scale(0)";
+      for (let i = 0; i < 5; i++) {
         setTimeout(() => {
-          cubeRef.current.style.transform = "scale(0.95)";
-          cubeRef.current.style.opacity = "1";
-        }, 1800);
+          headers[i].style.opacity = "1";
+          headers[i].style.transform = "translateY(20px)";
+          icons[5 - i - 1].style.opacity = "1";
+          icons[5 - i - 1].style.transform = "translateY(20px)";
+        }, i * 200 + delay);
       }
+    }
 
-      setTimeout(() => {
-        if (navRef.current) {
-          const menu = navRef.current.querySelector(".mobile");
-          menu.style.opacity = "1";
+    mainRefs.forEach((ref, i) => {
+      if (ref.current) {
+          setTimeout(() => {
+            ref.current.style.opacity = "1";
+            ref.current.style.transform = "translateY(-10px)";
+          }, i*200 + 1000 + delay);
         }
-      }, 2400);
+    })
+
+    if (cubeRef.current) {
+      cubeRef.current.style.transform = "scale(0)";
+      setTimeout(() => {
+        cubeRef.current.style.transform = "scale(0.95)";
+        cubeRef.current.style.opacity = "1";
+      }, 1800 + delay);
+    }
+
+    setTimeout(() => {
+      if (navRef.current) {
+        const menu = navRef.current.querySelector(".mobile");
+        menu.style.opacity = "1";
+      }
+    }, 2400 + delay);
 
   }, []);
 
