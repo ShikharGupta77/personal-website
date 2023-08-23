@@ -55,7 +55,7 @@ export default function Navbar({ navRef }) {
       </div>
 
       {/* Mobile Menu */}
-      <div className="mobile z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color lg:hidden">
+      <div className="mobile z-10 flex h-0 flex-col items-center justify-between bg-inherit pt-5 text-secondary-color opacity-0 transition duration-500 lg:hidden">
         {/* Blur */}
         <div className={`fixed inset-0 z-10 bg-transparent backdrop-blur transition-opacity duration-300 ${isMobileMenuToggled ? "opacity-100" : "pointer-events-none opacity-0"}`}></div>
         <span className={`z-20 ml-auto mr-6 transform cursor-pointer text-secondary-color transition-transform duration-300 ${isMobileMenuToggled ? "-rotate-180" : ""}`} onClick={() => setIsMobileMenuToggled(!isMobileMenuToggled)}>

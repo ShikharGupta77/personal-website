@@ -18,12 +18,17 @@ export default function Hero() {
   const [likeStatus, setLikeStatus] = useState(0);
   const [revealPage, setRevealPage] = useState(false);
 
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   function typeHey(typewriter) {
     typewriter
       .typeString("Hey there!")
       .pauseFor(2300)
       .typeString(" I'm")
-      .pauseFor(1200)
+      .pauseFor(2100)
       .callFunction(() => {
         setHeyStatus(2);
         setNameStatus(1);
@@ -34,7 +39,7 @@ export default function Hero() {
   function typeName(typewriter) {
     typewriter
       .typeString("Shikhar Gupta")
-      .pauseFor(1200)
+      .pauseFor(2300)
       .callFunction(() => {
         setNameStatus(2);
         setLikeStatus(1);
@@ -76,6 +81,10 @@ export default function Hero() {
           if (buttonRef.current) {
             setTimeout(() => {
               buttonRef.current.style.opacity = "1";
+              if (navRef.current) {
+                const menu = navRef.current.querySelector(".mobile");
+                menu.style.opacity = "1";
+              }
             }, 800);
           }
         }, 1100);
