@@ -28,7 +28,7 @@ export default function About() {
   const [showRickroll, setShowRickroll] = useState(false);
   const rickrollAudioRef = useRef(null);
   const technologiesRef = useRef(null);
-
+  
   useEffect(() => {
     const options = {
       root: null,
@@ -114,7 +114,7 @@ export default function About() {
           Outside of programming, I love a good day outdoors. I often go out with friends and family. I also really like playing table tennis, and played for a few years. I'm down for a game at anytime of the day!
         </p>
         <div className="flex h-1/4 flex-row justify-center lg:w-5/12">
-          <Image src={showRickroll ? rickroll_gif : headshot} className="my-9 w-10/12 max-w-md self-center rounded-full drop-shadow-[0.6rem_0.55rem_0px_var(--accent)] transition duration-300 lg:mt-0 lg:hover:drop-shadow-[1.1rem_1.05rem_0px_var(--accent)]" onDoubleClick={() => setShowRickroll(!showRickroll)} alt="Profile Photo" priority={true}/>
+          <Image src={showRickroll ? rickroll_gif : headshot} className="my-9 w-10/12 max-w-md self-center rounded-full drop-shadow-[0.6rem_0.55rem_0px_var(--accent)] transition duration-300 lg:mt-0 lg:hover:drop-shadow-[1.1rem_1.05rem_0px_var(--accent)]" onDoubleClick={() => setShowRickroll(!showRickroll)} alt="Profile Photo" />
           <audio src="./rickroll/rickroll.mp3" ref={rickrollAudioRef} />
         </div>
       </div>
