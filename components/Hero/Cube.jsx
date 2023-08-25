@@ -1,7 +1,7 @@
 "use client";
 
 import Head from "next/head";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { Canvas, useLoader, useFrame, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
@@ -47,8 +47,10 @@ const Model = () => {
 };
 
 export default function Cube({ pointerRef }) {
+  const [showPointer, setShowPointer] = useState(true);
+
   return (
-    <div className="w-full flex-1">
+    <div className="w-full flex-1" onMouseDown={() => setShowPointer(false)} onTouchStart={() => setShowPointer(false)}>
       <Canvas className="w-full flex-1 hover:cursor-grab active:cursor-grabbing" shadows dpr={[1, 2]} camera={{ position: [75, 75, 75], fov: 5 }}>
         <pointLight position={[10, 10, 10]} intensity={0.35} power={3} castShadow color="#b8f6ff" />
         <pointLight position={[10, 10, -10]} intensity={0.35} power={3} castShadow color="#b8f6ff" />
@@ -64,9 +66,7 @@ export default function Cube({ pointerRef }) {
         <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={1} />
       </Canvas>
       <div className="absolute inset-y-0 left-[5%] flex overflow-x-hidden text-secondary-color opacity-0 transition duration-300" ref={pointerRef}>
-        <div className="my-auto">
-          <PiHandSwipeRightLight className="h-20 w-20 lg:h-32 lg:w-32" />
-        </div>
+        <div className="my-auto">{showPointer && <PiHandSwipeRightLight className="h-20 w-20 lg:h-32 lg:w-32" />}</div>
       </div>
     </div>
   );

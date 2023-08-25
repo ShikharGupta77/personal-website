@@ -64,7 +64,7 @@ export default function Hero() {
     }
 
     if (pointerRef.current) {
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < 3; i++) {
         setTimeout(
           () => {
             pointerRef.current.style.transition = "left 1000ms ease-in-out, opacity 200ms";
