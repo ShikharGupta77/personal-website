@@ -11,6 +11,7 @@ export default function Hero() {
   const navRef = useRef(null);
   const mainRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const cubeRef = useRef(null);
+  const pointerRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to top
@@ -55,13 +56,33 @@ export default function Hero() {
       }, 1000 + delay);
     }
 
-    setTimeout(() => {
-      if (navRef.current) {
+    if (navRef.current) {
+      setTimeout(() => {
         const menu = navRef.current.querySelector(".mobile");
         menu.style.opacity = "1";
+      }, 1500 + delay);
+    }
+
+    if (pointerRef.current) {
+      for (let i = 0; i < 2; i++) {
+        setTimeout(
+          () => {
+            pointerRef.current.style.transition = "left 1000ms ease-in-out, opacity 200ms";
+            pointerRef.current.style.opacity = "1";
+            pointerRef.current.style.left = "75%";
+            setTimeout(() => {
+              pointerRef.current.style.transition = "left 0ms ease-in-out, opacity 200ms";
+              pointerRef.current.style.opacity = "0";
+              setTimeout(() => {
+                pointerRef.current.style.left = "0%";
+              }, 200);
+            }, 1100);
+          },
+          1800 + delay + i * 1600,
+        );
       }
-    }, 2400 + delay);
-  }, []);
+    }
+  });
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -91,7 +112,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="mb-24 mt-14 flex w-full flex-1 opacity-0 transition duration-1000 lg:mr-16 lg:mt-20 lg:w-5/12" ref={cubeRef}>
-          <Cube />
+          <Cube pointerRef={pointerRef} />
         </div>
       </section>
     </div>

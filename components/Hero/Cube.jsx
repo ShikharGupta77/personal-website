@@ -7,6 +7,7 @@ import { Environment, OrbitControls, useAnimations, useGLTF } from "@react-three
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
+import { PiHandSwipeRightLight } from "react-icons/pi";
 
 const Model = () => {
   const groupRef = useRef();
@@ -45,7 +46,7 @@ const Model = () => {
   );
 };
 
-export default function Cube() {
+export default function Cube({ pointerRef }) {
   return (
     <div className="w-full flex-1">
       <Canvas className="w-full flex-1 hover:cursor-grab active:cursor-grabbing" shadows dpr={[1, 2]} camera={{ position: [75, 75, 75], fov: 5 }}>
@@ -62,6 +63,11 @@ export default function Cube() {
         </Suspense>
         <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={1} />
       </Canvas>
+      <div className="absolute inset-y-0 left-0 flex overflow-x-hidden text-secondary-color opacity-0 transition duration-300" ref={pointerRef}>
+        <div className="my-auto">
+          <PiHandSwipeRightLight className="h-20 w-20 lg:h-32 lg:w-32" />
+        </div>
+      </div>
     </div>
   );
 }
