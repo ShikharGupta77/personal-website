@@ -74,7 +74,7 @@ export default function Hero() {
               pointerRef.current.style.transition = "left 0ms ease-in-out, opacity 200ms";
               pointerRef.current.style.opacity = "0";
               setTimeout(() => {
-                pointerRef.current.style.left = "0%";
+                pointerRef.current.style.left = "5%";
               }, 200);
             }, 1100);
           },

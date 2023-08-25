@@ -63,7 +63,7 @@ export default function Cube({ pointerRef }) {
         </Suspense>
         <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={1} />
       </Canvas>
-      <div className="absolute inset-y-0 left-0 flex overflow-x-hidden text-secondary-color opacity-0 transition duration-300" ref={pointerRef}>
+      <div className="absolute inset-y-0 left-[5%] flex overflow-x-hidden text-secondary-color opacity-0 transition duration-300" ref={pointerRef}>
         <div className="my-auto">
           <PiHandSwipeRightLight className="h-20 w-20 lg:h-32 lg:w-32" />
         </div>
