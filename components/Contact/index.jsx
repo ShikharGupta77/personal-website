@@ -21,7 +21,7 @@ export default function Contact() {
         </button>
       </a>
       <div className="mr-24 mt-10 flex flex-row items-center space-x-11">
-        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shikhargupta7/" className="cursor-pointer text-secondary-color transition duration-300 hover:text-accent-color">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shikhargupta7/" className="cursor-pointer text-secondary-color transition duration-300 hover:text-accent-color ">
           <FaLinkedin size={28} />
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://github.com/ShikharGupta77" className="cursor-pointer text-secondary-color transition duration-300 hover:text-accent-color">
