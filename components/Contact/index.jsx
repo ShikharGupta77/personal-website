@@ -12,7 +12,7 @@ export default function Contact() {
       <div className="mt-1 flex flex-col lg:mt-5">
         <p className="pt-5 text-base text-secondary-color lg:w-8/12 lg:text-xl">If you have opportunities or are interested in collaboration, please email me. You can also connect on social media for questions or just to say hi! My inbox is always open, and I'll try to get back as soon as possible.</p>
       </div>
-      <a className="w-fit rounded-full bg-secondary-color py-2 text-sm text-primary-color transition duration-300 lg:text-base" target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com">
+      <a className="w-fit rounded-full bg-secondary-color py-2 text-sm text-primary-color transition duration-300 lg:text-base" target="_blank" rel="noopener noreferrer" href="mailto:shkgupta@ucdavis.edu">
         <button className="mt-9">
           <div className="group flex w-full flex-row pl-5 pr-4">
             Email

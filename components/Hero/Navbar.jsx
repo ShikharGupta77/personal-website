@@ -38,7 +38,7 @@ export default function Navbar({ navRef }) {
           </a>
         </div>
         <div className="icons mr-24 flex -translate-y-[20px] flex-row items-center space-x-11">
-          <a target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com" className="cursor-pointer text-secondary-color opacity-0 transition duration-300 hover:text-accent-color">
+          <a target="_blank" rel="noopener noreferrer" href="mailto:shkgupta@ucdavis.edu" className="cursor-pointer text-secondary-color opacity-0 transition duration-300 hover:text-accent-color">
             <MdEmail size={33} />
           </a>
           <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shikhargupta7/" className="cursor-pointer text-secondary-color opacity-0 transition duration-300 hover:text-accent-color">
@@ -80,7 +80,7 @@ export default function Navbar({ navRef }) {
             </a>
           </div>
           <div className="mb-16 ml-4 mr-12 flex flex-row items-center justify-around">
-            <a target="_blank" rel="noopener noreferrer" href="mailto:shikharscout@gmail.com" className="cursor-pointer text-secondary-color transition duration-300">
+            <a target="_blank" rel="noopener noreferrer" href="mailto:shkgupta@ucdavis.edu" className="cursor-pointer text-secondary-color transition duration-300">
               <MdEmail size={29} />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shikhargupta7/" className="cursor-pointer text-secondary-color transition duration-300">
