@@ -47,12 +47,12 @@ const Model = () => {
 };
 
 export default function Cube({ pointerRef }) {
+  const [showPointer, setShowPointer] = useState(true);
+
   const webGLSupported = isWebGL2Available();
   if (!webGLSupported) {
     return <div></div>;
   }
-
-  const [showPointer, setShowPointer] = useState(true);
 
   return (
     <div className="w-full flex-1" onMouseDown={() => setShowPointer(false)} onTouchStart={() => setShowPointer(false)}>
