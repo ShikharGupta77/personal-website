@@ -10,6 +10,9 @@ module.exports = {
         "lighter-primary-color": "var(--lighter-primary)",
         "accent-faded-color": "var(--accent-faded)",
       },
+      screens: {
+        "-sm": { max: "639px" },
+      },
     },
   },
   plugins: [],

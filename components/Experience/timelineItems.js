@@ -11,7 +11,7 @@ const timelineItems = [
     startDate: "June 2024",
     endDate: "September 2024",
     title: "SWE Intern",
-    experience: "Incoming Software Engineering Intern for the CAD-CSG team in the Silicon Engineering Group for Summer 2024.",
+    experience: "Incoming Software Engineering Intern for CAD-CSG team in the Silicon Engineering Group for Summer 2024. Super excited!",
   },
   {
     image: galaxysdk,
