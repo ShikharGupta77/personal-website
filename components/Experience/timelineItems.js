@@ -1,8 +1,18 @@
 import galaxysdk from "./../../public/companies/galaxysdk.png";
 import gardeneur from "./../../public/companies/gardeneur.png";
 import salubrity from "./../../public/companies/salubrity.png";
+import apple from "./../../public/companies/apple.jpeg";
 
 const timelineItems = [
+  {
+    image: apple,
+    showBottomLine: true,
+    company: "Apple",
+    startDate: "June 2024",
+    endDate: "September 2024",
+    title: "SWE Intern",
+    experience: "Incoming Software Engineering Intern for the CAD-CSG team in the Silicon Engineering Group for Summer 2024.",
+  },
   {
     image: galaxysdk,
     showBottomLine: true,

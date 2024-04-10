@@ -8,12 +8,12 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { PiHandSwipeRightLight } from "react-icons/pi";
+import { isWebGL2Available } from "@react-three/drei";
 
 const Model = () => {
   const groupRef = useRef();
   const gltf = useLoader(GLTFLoader, "/cube.gltf");
   const { actions, mixer } = useAnimations(gltf.animations, groupRef);
-
   const box = new THREE.Box3().setFromObject(gltf.scene);
   const center = box.getCenter(new THREE.Vector3());
 
@@ -47,6 +47,11 @@ const Model = () => {
 };
 
 export default function Cube({ pointerRef }) {
+  const webGLSupported = isWebGL2Available();
+  if (!webGLSupported) {
+    return <div></div>;
+  }
+
   const [showPointer, setShowPointer] = useState(true);
 
   return (

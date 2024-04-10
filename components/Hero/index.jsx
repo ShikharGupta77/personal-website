@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
             <ScrollLink to="Experience" smooth={true} duration={500} offset={-50}>
               <button className="mt-4 rounded-full bg-secondary-color py-2 opacity-0 transition duration-300 lg:mt-5" ref={mainRefs[3]}>
-                <div className="group flex w-full flex-row pl-5 pr-4 text-sm lg:text-sm 2xl:text-base">
+                <div className="group flex w-full flex-row pl-5 pr-4 text-sm lg:text-base">
                   See my experience
                   <LiaAngleRightSolid size={15} className="my-auto mt-[0.2rem] w-6 transition-all duration-300 lg:mt-[0.33rem] lg:group-hover:pl-2" />
                 </div>
