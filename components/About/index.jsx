@@ -28,7 +28,7 @@ export default function About() {
   const [showRickroll, setShowRickroll] = useState(false);
   const rickrollAudioRef = useRef(null);
   const technologiesRef = useRef(null);
-  
+
   useEffect(() => {
     const options = {
       root: null,
@@ -104,10 +104,10 @@ export default function About() {
       <div className="mt-5 flex flex-col-reverse lg:flex-row">
         <p className="pt-5 text-base text-secondary-color lg:w-7/12 lg:pr-16 lg:text-xl">
           Hey! I'm Shikhar Gupta, and I'm currently pursuing a Bachelor's Degree of Science in Computer Science at the University of California, Davis. Last summer, I was a Software Engineering Intern at{" "}
-          <a href="https://www.galaxysdk.com/" target="_blank" rel="noopener noreferrer" className="underline-blue-400 underline decoration-accent-color underline-offset-[3px] transition duration-300 hover:underline-offset-[4px]">
-            GalaxySDK
+          <a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer" className="underline-blue-400 underline decoration-accent-color underline-offset-[3px] transition duration-300 hover:underline-offset-[4px]">
+            Apple
           </a>
-          , a startup based in San Francisco.
+          , working with the CAD-CSG team in the Silicon Engineering Group to optimize server discovery in Choria.
           <br /> <br />
           My favorite part of programming is creating apps and websites, like this one! I love the whole process of taking an idea from ideation to design to production. I also find competitive programming pretty fun. Finally, I love using AI models to solve interesting and complex problems.
           <br /> <br />

@@ -11,7 +11,7 @@ const timelineItems = [
     startDate: "June 2024",
     endDate: "September 2024",
     title: "SWE Intern",
-    experience: "Incoming Software Engineering Intern for CAD-CSG team in the Silicon Engineering Group for Summer 2024. Super excited!",
+    experience: "I developed a MongoDB-based plugin in Golang, reducing server metadata search time from 30 to 1.5 seconds. This optimized storage move operations to decrease server disruption time by 18 hours monthly across 2,000+ moves. Additionally, I architected a REST API with Go ent for Choria integration, streamlining server interactions and reducing development time by 85%.",
   },
   {
     image: galaxysdk,
